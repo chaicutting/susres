@@ -5,16 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudhanshu Kumar | Resume</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Added FontAwesome for Social Media Logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <header class="glass-card hero">
+        <!-- Floating Tab Navigation -->
+        <nav class="glass-nav">
+            <a href="#about" class="nav-link active">About</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+        </nav>
+
+        <header id="about" class="glass-card hero">
             <h1>SUDHANSHU KUMAR</h1>
             <p class="subtitle">MBA Candidate 2026 | IIM Visakhapatnam</p>
-            <p class="contact"><a href="mailto:sudhanshu.kumar24-01@iimv.ac.in">sudhanshu.kumar24-01@iimv.ac.in</a></p>
+            
+            <!-- Social Media Logos -->
+            <div class="social-links">
+                <a href="mailto:sudhanshu.kumar24-01@iimv.ac.in" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/your-profile" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
         </header>
 
-        <section class="glass-card">
+        <section id="education" class="glass-card">
             <h2>Education</h2>
             <div class="item">
                 <div class="item-header">
@@ -32,7 +48,7 @@
             </div>
         </section>
 
-        <section class="glass-card">
+        <section id="experience" class="glass-card">
             <h2>Professional Experience</h2>
             <div class="item">
                 <div class="item-header">
@@ -46,10 +62,6 @@
                     <li>Developed test plans, cases, and scripts, maintaining thorough documentation.</li>
                 </ul>
             </div>
-        </section>
-
-        <section class="glass-card">
-            <h2>Summer Internship</h2>
             <div class="item">
                 <div class="item-header">
                     <h3>Digital & Social Media Marketing Intern | IIM Visakhapatnam</h3>
@@ -63,7 +75,7 @@
             </div>
         </section>
 
-        <section class="glass-card">
+        <section id="projects" class="glass-card">
             <h2>Projects & Achievements</h2>
             <div class="item">
                 <h3>Key Academic Projects</h3>
