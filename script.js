@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Reveal animation for Apple-style fluid layout
+    // 1. Apple-style reveal animation
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -16,13 +16,35 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(card);
     });
 
-    // Smooth scrolling mechanism
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // 2. Smooth scrolling for tab clicks
+    document.querySelectorAll('.nav-link').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({ 
                 behavior: 'smooth' 
             });
+        });
+    });
+
+    // 3. Highlight active tab on scroll
+    const sections = document.querySelectorAll("header, section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 150)) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+            }
         });
     });
 });
